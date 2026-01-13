@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fdb66b;
+    color: #333;
+    line-height: 1.6;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Page container*/
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+
+nav {
+    background: #ffca2c;
+    /*taco-theme yellow */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover,
+nav a.active {
+    background: white;
+    color: #e67f1e;
+}
+
+/* ---------------------------
+   Page Headings
+----------------------------*/
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    color: #e67f1e;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* ---------------------------
+   Contact Page Form
+----------------------------*/
+form {
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+button {
+    background: #e67f1e;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #cf6f16;
+}
+
+
+.section-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /* more space between columns */
+    margin: 70px 0;
+    /* MUCH more vertical spacing */
+    padding: 20px 0;
+    /* inner breathing room */
+}
+
+.section-row img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-text {
+    width: 55%;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* Section 3: image – text – image */
+.section-row.middle img {
+    width: 32%;
+}
+
+.section-row.middle .section-text {
+    width: 36%;
+    text-align: center;
+}
+
+/* Add extra space between sections visually */
+.section-row+.section-row {
+    border-top: 1px solid #ddd;
+    padding-top: 60px;
+}
+
+/* Footer */
+footer {
+    margin-top: 100px;
+    padding: 30px;
+    text-align: center;
+    background: #ffca2c;
+    border-radius: 6px;
+    font-size: 1.1rem;
+
+
+    padding: 25px 40px;
+    background: #ffca2c;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1rem;
+}
+
+/* Left side text */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    color: #e67f1e;
+}
+
+.footer-email {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Right side social icons */
+.footer-right {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-right img {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.footer-right img:hover {
+    transform: scale(1.15);
+
+    .citation {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 8px;
+        font-style: italic;
+    }
+
+    .image-block {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        /* stack image + citation vertically */
+    }
+
+    /* Make image responsive */
+    .image-block img {
+        width: 100%;
+        /* fill container */
+        height: auto;
+        /* maintain aspect ratio */
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Citation styling */
+    .citation {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 8px;
+        font-style: italic;
+        word-wrap: break-word;
+        /* wrap long words if needed */
+    }
+
+    /* Make layout responsive for smaller screens */
+    @media (max-width: 800px) {
+        .section-row {
+            flex-direction: column;
+            /* stack image + text vertically */
+            gap: 20px;
+        }
+
+        .section-row.middle .image-block,
+        .section-row.middle .section-text {
+            width: 100%;
+            /* fill full width on small screens */
+        }
+
+        .image-block {
+            width: 100%;
+        }
+
+        .section-text {
+            width: 100%;
+        }
+    }
